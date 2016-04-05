@@ -1,4 +1,5 @@
 #include <cstddef>
+
 template <typename t>
 class ArrayLike
 {
@@ -53,5 +54,4 @@ public:
     {
         return ArrayLike(read, write, index+offset);
     }
-
 };
