@@ -52,6 +52,11 @@ public:
 
     ArrayLike operator+(size_t offset)
     {
-        return ArrayLike(read, write, index+offset);
+        return ArrayLike(read, write, index + offset);
+    }
+
+    ArrayLike operator-(size_t offset)
+    {
+        return ArrayLike(read, write, index - offset);
     }
 };

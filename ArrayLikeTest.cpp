@@ -53,6 +53,18 @@ int main()
     cout << (int)m[2] << endl;
     cout << (int)m2[2] << endl;
 
+    // pointer-like with negative offset
+    ArrayLike<uint8_t> m3 = m + 256;
+    *(m3 - 250) = 6;
+    cout << (int)m3[-250] << endl;
+    cout << (int)m[6] << endl;
+
+    uint8_t* m4 = m2 + 256;
+    *(m4 - 250) = 6;
+    cout << (int)m4[-250] << endl;
+    cout << (int)m2[6] << endl;
+
+
     // pointer-like with offset and indexing
     (m + 2)[2] = 4;
     (m2 + 2)[2] = 4;
